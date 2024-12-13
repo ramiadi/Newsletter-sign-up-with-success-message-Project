@@ -13,51 +13,80 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
 
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
   </style>
 </head>
 
 <body>
+  <main class="page">
+    <!-- Sign-up form start -->
+    <picture>
+      <img src="assets/images/illustration-sign-up-mobile.svg" alt="Image for mobile" class="image-mobile">
 
-  <!-- Sign-up form start -->
+      <img src="assets/images/illustration-sign-up-desktop.svg" alt="Image for desktop" class="image-desktop">
+    </picture>
 
-  Stay updated!
+    <section class="box">
 
-  Join 60,000+ product managers receiving monthly updates on:
+      <h1 class="box__heading">Stay updated!</h1>
 
-  Product discovery and building what matters
-  Measuring to ensure updates are a success
-  And much more!
+      <p class="box__text">
+        Join 60,000+ product managers receiving monthly updates on:
+      </p>
 
-  Email address
-  email@company.com
+      <div class="success-line">
+        <img src="assets/images/icon-success.svg" alt="Success icon" class="success-image">
+        Product discovery and building what matters
+      </div>
+      <div class="success-line">
+        <img src="assets/images/icon-success.svg" alt="Success icon" class="success-image">
+        Measuring to ensure updates are a success
+      </div>
+      <div class="success-line">
+        <img src="assets/images/icon-success.svg" alt="Success icon" class="success-image">
+        And much more!
+      </div>
 
-  Subscribe to monthly newsletter
+      <form>
 
-  <!-- Sign-up form end -->
+        <div class="hero">
+          <div class="input-group">
 
-  <!-- Success message start -->
+            <div class="input-container">
+              <label id="email-label">Email address</label>
+              <span id="email-error"></span>
+            </div>
+            <input type="email" spellcheck="false" id="email-field" placeholder="Email address">
 
-  Thanks for subscribing!
+          </div>
 
-  A confirmation email has been sent to ash@loremcompany.com.
-  Please open it and click the button inside to confirm your subscription.
+        </div>
 
-  Dismiss message
+        <button type="submit" id="submitBtn">Subscribe to monthly newsletter</button>
+      </form>
 
-  <!-- Success message end -->
+    </section>
+    <!-- Sign-up form end -->
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    <!-- Success message start -->
+
+    <div id="popup" class="popup hidden">
+      <div class="popup-content">
+        <img src="assets/images/icon-success.svg" alt="Icon success" class="popup-icon">
+        <h2>Thanks for subscribing!</h2>
+
+        <p>
+          A confirmation email has been sent to <span id="userEmail"></span>.
+          Please open it and click the button inside to confirm your subscription.
+        </p>
+        <button id="dismissPopup">Dismiss message</button>
+      </div>
+    </div>
+
+    <!-- Success message end -->
+
+
+  </main>
   <script src="scripts.js/Main.js"></script>
 </body>
 
